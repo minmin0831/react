@@ -71,3 +71,29 @@ function App() {
 }
 
 export default App;
+
+// make sure test and web-vitals packages are cleaned up by cli npm uninstall before releasing to github.
+
+// 1. deploy to Netflify
+// git init
+// git add .
+// git commit -m "first commit" 
+// create a new github repository name
+// copy the whole codes from "push an existing repository from the command line" and paste it on the terminal in VC code.
+// once the project is added to github, log in Netflify to deploy it. 
+
+// pros: environment variables, serveless functions, no extra scripts and dependacies added 
+
+// 2. deploy to github packages
+// npm i gh-pages -D 
+// gh-pages added to devDependencies in package.json file.
+// add "homepage" : "http://github_username.github.io/repository_name", in the curly bracket where project version is in the package.json file.
+// add "predeploy": "npm run build", "deploy": "gh-pages -d build" in "scripts" curly bracket in the json file.
+// git init
+// git add .
+// git commit -m "first commit"
+// create a new github repository name
+// copy the whole codes from "push an existing repository from the command line" and paste it on the terminal in VC code.
+// once the project is added to github, log in Netflify to deploy it. 
+// npm run deploy (this will absolutely deploy the react application on github page.)
+// copy the homepage url and paste it on the url input field on Chrome. 

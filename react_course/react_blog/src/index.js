@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router, Route } from 'react-router-dom'; // version 5
-
+import { StoreProvider } from 'easy-peasy';
+import store from './store';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom'; // 해당 패키지를 importing 시켜야 한다. version 6 
 
 /*
@@ -29,11 +30,13 @@ Please change the parent <Route path="/"> to <Route path="*">.
 React Version Downgrade: npm install react-router-dom@5.2.0
 */
 
-ReactDOM.render(
+ReactDOM.render( // store 속성 값을 부여함으로써 App 내 어디서든 json 데이터 접근을 용이하도록 하였다. 
   <React.StrictMode>
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
+    <StoreProvider store={store}>
+      <Router>
+        <Route path="/" component={App} />
+      </Router>
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

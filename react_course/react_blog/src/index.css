@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* font */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"); /* font */
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ html {
 body {
   min-height: 100vh;
   /* root 태그에서 flex-grow로 화면 전체를 차지하게 하였으므로, min-height를 따로 주지 않아도 App 내 컨테이너들이 자동으로 늘어나게 된다. */
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -22,7 +22,7 @@ body {
 
 /* body 안에 div로 모든 컨텐츠를 가두어 버리기 때문에 반드시 root div가 body 영역을 모두 먹을 수 있게 해야한다. */
 #root {
-  flex-grow: 1; 
+  flex-grow: 1;
   /* body 내에서 가능한 공간을 모두 차지할 수 있게 한다. flex-box로 접근하면 이외 같이 flex-grow: 1로 설정하여 body 공간을 남김없이 사용하게 해야 한다. App의 부모 태그이기도 하다. */
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
 
 .App {
   width: 100%;
-  max-width: 800px; 
+  max-width: 800px;
   /* max-width를 설정하지 않으면 App이 전체 width를 먹는다. */
   height: 100vh;
   /* App에서 height: 100vh로 주지 않게 되면 home, post, about 각각 다른 페이지 방문 시 컨텐츠 길이만큼 각기 다른 크기의 height를 갖게 된다. */
@@ -43,7 +43,8 @@ body {
   box-shadow: 0px 0px 15px gray;
 }
 
-.Header, .Footer {
+.Header,
+.Footer {
   width: 100%;
   background-color: #66d8f5;
   padding: 1rem;
@@ -81,7 +82,7 @@ body {
 }
 
 .searchForm input[type="text"] {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   min-height: 48px;
   font-size: 1rem;
@@ -107,7 +108,7 @@ body {
   padding: 1rem;
 }
 
-.Nav li:hover, 
+.Nav li:hover,
 .Nav li:focus {
   padding: 1rem;
 }
@@ -117,20 +118,24 @@ body {
   text-decoration: none;
 }
 
-.Nav li:hover, 
-.Nav li:focus, 
-.Nav li:hover a, 
-.Nav li:focus a  {
+.Nav li:hover,
+.Nav li:focus,
+.Nav li:hover a,
+.Nav li:focus a {
   background-color: #eee;
   color: #333;
 }
 
-.Nav li:hover a, 
+.Nav li:hover a,
 .Nav li:focus a {
   cursor: pointer;
 }
 
-.Home, .NewPost, .PostPage, .About, .Missing {
+.Home,
+.NewPost,
+.PostPage,
+.About,
+.Missing {
   width: 100%;
   flex-grow: 1;
   /* root와 마찮가지로 제각각 height를 가지지 않으려면 flex-grow: 1 로 설정하여 동일하게 빈공간없이 화면을 먹을 수 있도록 한다. */
@@ -149,7 +154,7 @@ body {
   text-decoration: none;
 }
 
-.Home .post a, 
+.Home .post a,
 .Home .post a:visited {
   color: #000;
 }
@@ -180,9 +185,9 @@ body {
   margin-top: 1rem;
 }
 
-.newPostForm input[type='text'], 
+.newPostForm input[type="text"],
 .newPostForm textarea {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100%;
   min-height: 48px;
   font-size: 1rem;
@@ -206,8 +211,10 @@ body {
   cursor: pointer;
 }
 
-.Missing h2, .PostPage h2, 
-.Missing p, .PostPage p {
+.Missing h2,
+.PostPage h2,
+.Missing p,
+.PostPage p {
   margin-bottom: 1rem;
 }
 
@@ -217,9 +224,16 @@ body {
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: red;
   color: #fff;
   cursor: pointer;
+}
+
+.deleteButton {
+  background-color: red;
+}
+
+.editButton {
+  background-color: #333;
 }
 
 .statusMsg {
@@ -227,7 +241,7 @@ body {
 }
 
 .fontColor_red {
-  color: red; 
+  color: red;
   /* 일반 css와 마찮가지로 className에 해당 클래스 명을 추가해주기만 하면 해당 태그에 css style이 적용된다. */
 }
 
@@ -251,19 +265,19 @@ body {
     text-align: right;
   }
 
-  .Nav li:hover, 
-  .Nav li:focus, 
-  .Nav li:hover a, 
-  .Nav li:focus a  {
+  .Nav li:hover,
+  .Nav li:focus,
+  .Nav li:hover a,
+  .Nav li:focus a {
     background-color: #eee;
     color: #333;
   }
 
   .searchForm {
     width: 50%;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
- 
+
   .searchForm input[type="text"] {
     margin-left: 0.5rem;
   }
@@ -274,9 +288,7 @@ body {
 }
 
 @media only screen and (min-width: 992px) {
-
   .Header svg {
     font-size: 3rem;
   }
-
 }
